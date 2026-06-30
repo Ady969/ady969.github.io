@@ -24,11 +24,13 @@ Passionate Data Analyst skilled in SQL (PostgreSQL, MySQL), Python, and Data Vis
 ---
 
 ## 🛠️ Technical Toolkit
-* **Languages:** Python, SQL, R
-* **Data Visualization:** Power BI, Tableau, Matplotlib
+* **Languages:** Python, SQL
+* **Data Visualization:** Power BI, Matplotlib
 * **Data Manipulation:** Excel, Pandas
 
 ---
 
 ## 📬 Let's Connect!
-* **GitHub:** [@Ady969](https://github.com)
+* **LinkedIn:** [Muhammad Aadil Shaikh](https://www.linkedin.com/in/muhammad-aadil-shaikh-2a0596106/) 
+* **Email:** [adiltheanalyst@zohomail.in](mailto:adiltheanalyst@zohomail.in)
+* **GitHub Profile:** [@Ady969](https://github.com/Ady969)
