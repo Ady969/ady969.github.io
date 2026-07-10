@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MohmadAdil Shaikh — Data Analyst & Power BI Developer</title>
+<meta name="description" content="Data Analyst and Power BI Developer portfolio — Excel, SQL, Power BI, Python projects and medical device R&D background.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --ink-soft:#3A4862;
+    --paper:#F8F7F3;
+    --surface:#FFFFFF;
+    --muted:#6B7280;
+    --accent:#C9952B;
+    --accent-soft:#F3E6C8;
+    --line:#E5E1D8;
+    --radius:10px;
+    --max:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces',serif; font-weight:600; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--accent);
+    margin:0 0 10px;
+  }
+
+  /* Header / Hero */
+  header.hero{
+    padding:72px 0 48px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;
+  }
+  h1{font-size:clamp(32px,5vw,46px); line-height:1.1;}
+  .title-line{font-size:18px; color:var(--ink-soft); margin-top:10px; font-weight:500;}
+  .pitch{max-width:560px; margin-top:18px; color:var(--ink-soft); font-size:16px;}
+  nav.links{display:flex; gap:18px; flex-wrap:wrap;}
+  nav.links a{
+    font-family:'JetBrains Mono',monospace; font-size:13px; text-decoration:none;
+    border:1px solid var(--line); padding:8px 14px; border-radius:999px;
+    background:var(--surface); transition:border-color .15s ease, color .15s ease;
+    white-space:nowrap;
+  }
+  nav.links a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* KPI stat row */
+  .kpis{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px;
+  }
+  .kpi{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 16px;
+  }
+  .kpi .num{font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:500; color:var(--ink);}
+  .kpi .label{font-size:12px; color:var(--muted); margin-top:4px;}
+  .kpi .bars{display:flex; align-items:flex-end; gap:3px; height:18px; margin-top:10px;}
+  .kpi .bars span{display:block; width:5px; background:var(--accent-soft); border-radius:1px;}
+  .kpi .bars span.on{background:var(--accent);}
+
+  section{padding:48px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-size:24px; margin-bottom:24px;}
+
+  /* Skills */
+  .skill-group{margin-bottom:18px;}
+  .skill-group .g-label{
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px;
+  }
+  .tags{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{
+    font-size:13px; padding:6px 12px; border-radius:999px;
+    background:var(--surface); border:1px solid var(--line); color:var(--ink-soft);
+  }
+
+  /* Projects */
+  .projects{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .project{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px; display:flex; flex-direction:column; gap:10px;
+  }
+  .project h3{font-size:17px; font-weight:600;}
+  .stack{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent);}
+  .project p{font-size:14px; color:var(--ink-soft); margin:0;}
+  .metric{
+    font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink);
+    background:var(--accent-soft); display:inline-block; padding:4px 10px; border-radius:6px; width:fit-content;
+  }
+  .project a.repo{
+    margin-top:auto; font-size:13px; text-decoration:none; color:var(--ink);
+    border-top:1px solid var(--line); padding-top:12px; display:flex; align-items:center; gap:6px;
+  }
+  .project a.repo:hover{color:var(--accent);}
+
+  /* Experience */
+  .exp-item{margin-bottom:22px;}
+  .exp-item:last-child{margin-bottom:0;}
+  .exp-top{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline;}
+  .exp-role{font-weight:600; font-size:15px;}
+  .exp-dates{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);}
+  .exp-item ul{margin:8px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14px;}
+  .exp-item li{margin-bottom:4px;}
+
+  /* Education / Certs */
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
+  .cert-list{list-style:none; margin:0; padding:0;}
+  .cert-list li{
+    font-size:14px; padding:10px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:12px;
+  }
+  .cert-list li:last-child{border-bottom:none;}
+  .cert-list a{font-size:12px; font-family:'JetBrains Mono',monospace; text-decoration:none; color:var(--accent); white-space:nowrap;}
+
+  footer{padding:40px 0 64px; text-align:center;}
+  footer .links{display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:14px;}
+  footer a{font-family:'JetBrains Mono',monospace; font-size:13px; text-decoration:none; color:var(--ink-soft);}
+  footer a:hover{color:var(--accent);}
+  footer .note{font-size:12px; color:var(--muted); margin-top:18px;}
+
+  @media (max-width:720px){
+    .kpis{grid-template-columns:repeat(2,1fr);}
+    .projects{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow">Data Analyst &middot; Power BI Developer</p>
+        <h1>MohmadAdil Shaikh</h1>
+        <p class="title-line">Senior R&amp;D Officer turning medical device test data into dashboards, queries, and decisions.</p>
+        <p class="pitch">6+ years in medical device R&amp;D, including 4+ years applying Excel and Power BI for data analysis and dashboard reporting — with working knowledge of SQL and Python. I build things outside work too: see the projects below.</p>
+      </div>
+      <nav class="links" aria-label="Quick links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://github.com/ady969" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/mohmadadil-shaikh" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="num">6+</div>
+        <div class="label">Years in Medical Device R&amp;D</div>
+        <div class="bars" aria-hidden="true"><span style="height:40%" class="on"></span><span style="height:55%" class="on"></span><span style="height:70%" class="on"></span><span style="height:85%" class="on"></span><span style="height:100%" class="on"></span></div>
+      </div>
+      <div class="kpi">
+        <div class="num">4+</div>
+        <div class="label">Years Excel &amp; Power BI</div>
+        <div class="bars" aria-hidden="true"><span style="height:30%" class="on"></span><span style="height:55%" class="on"></span><span style="height:75%" class="on"></span><span style="height:50%"></span><span style="height:40%"></span></div>
+      </div>
+      <div class="kpi">
+        <div class="num">4</div>
+        <div class="label">Independent Data Projects</div>
+        <div class="bars" aria-hidden="true"><span style="height:60%" class="on"></span><span style="height:40%" class="on"></span><span style="height:90%" class="on"></span><span style="height:65%" class="on"></span><span style="height:30%"></span></div>
+      </div>
+      <div class="kpi">
+        <div class="num">2</div>
+        <div class="label">SQL Certifications</div>
+        <div class="bars" aria-hidden="true"><span style="height:50%" class="on"></span><span style="height:80%" class="on"></span><span style="height:35%"></span><span style="height:60%"></span><span style="height:45%"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+
+    <div class="skill-group">
+      <div class="g-label">Data &amp; BI tools</div>
+      <div class="tags">
+        <span class="tag">Excel (Advanced)</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">Power Query</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">SQL</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Python (Pandas, NumPy)</span>
+        <span class="tag">Jupyter Notebook</span>
+        <span class="tag">Google Colab</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="g-label">Analytical methods</div>
+      <div class="tags">
+        <span class="tag">Design of Experiments (DOE)</span>
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">FMEA</span>
+        <span class="tag">Root Cause Analysis</span>
+        <span class="tag">Process Validation (IQ/OQ/PQ)</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="g-label">Domain knowledge</div>
+      <div class="tags">
+        <span class="tag">Medical Device Development</span>
+        <span class="tag">Design Verification &amp; Validation</span>
+        <span class="tag">Mechanical/Physical Testing</span>
+        <span class="tag">Regulatory Documentation (DHR)</span>
+      </div>
+    </div>
+
+    <div class="skill-group" style="margin-bottom:0;">
+      <div class="g-label">Soft skills</div>
+      <div class="tags">
+        <span class="tag">Stakeholder Communication</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Attention to Detail</span>
+        <span class="tag">Cross-Functional Collaboration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <h3>Customer Shopping Behaviour Analysis</h3>
+        <div class="stack">Python &middot; SQL &middot; Power BI &middot; PostgreSQL</div>
+        <p>Performed end-to-end retail analysis on 3,900 transactional records — Python (Pandas, NumPy) for data exploration and cleaning, PostgreSQL for structured querying. Wrote 10 business SQL queries covering revenue segmentation by gender, customer tier classification, and loyalty pattern analysis.</p>
+        <span class="metric">73% non-subscriber base identified</span>
+        <a class="repo" href="https://github.com/ady969" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+      <div class="project">
+        <h3>Bank Customer Churn Dashboard</h3>
+        <div class="stack">Power BI &middot; DAX &middot; Power Query</div>
+        <p>Performed end-to-end churn analysis on 10,000+ bank customer records using Power Query for multi-step ETL. Built DAX measures for Churn Rate, Retention Rate, and Lifetime Indicators, with drill-through dashboards for segment-level exploration.</p>
+        <span class="metric">35% faster ETL refresh</span>
+        <a class="repo" href="https://github.com/ady969" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+      <div class="project">
+        <h3>Lotus Hospital Analytics Dashboard</h3>
+        <div class="stack">Power BI &middot; Excel &middot; Data Modeling</div>
+        <p>Consolidated 4+ Excel data sources (admissions, billing, revenue, doctor performance) into a unified Power BI star-schema model, designing fact and dimension tables for reliable cross-functional KPI reporting.</p>
+        <span class="metric">12–15% operational inefficiencies surfaced</span>
+        <a class="repo" href="https://github.com/ady969" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+      <div class="project">
+        <h3>Zepto SQL Data Analysis</h3>
+        <div class="stack">PostgreSQL &middot; SQL</div>
+        <p>Analyzed 2,500+ product, order, and inventory records using complex joins, aggregations, subqueries, and date-based filtering to deliver pricing and stock optimization insights for category management.</p>
+        <span class="metric">20% query performance gain</span>
+        <a class="repo" href="https://github.com/ady969" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <span class="exp-role">Senior R&amp;D Officer — Meril Endo-Surgery Pvt. Ltd.</span>
+        <span class="exp-dates">Apr 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Build Power BI dashboards combining test data, project timelines, and market benchmarking for cross-functional teams.</li>
+        <li>Use SQL to query and extract process data, and Python to automate routine data-cleaning tasks.</li>
+        <li>Lead development of surgical implant and delivery system devices from concept through commercialization.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <span class="exp-role">R&amp;D Officer — Meril Endo-Surgery Pvt. Ltd.</span>
+        <span class="exp-dates">Mar 2022 – Apr 2025</span>
+      </div>
+      <ul>
+        <li>Built Excel/Power BI dashboards to track test results and project timelines for cross-functional visibility.</li>
+        <li>Independently designed and executed Design of Experiments (DOE) to evaluate process and material parameters.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <span class="exp-role">R&amp;D Officer — Meril Healthcare Pvt. Ltd. (Trauma Orthopedics)</span>
+        <span class="exp-dates">Dec 2019 – Feb 2022</span>
+      </div>
+      <ul>
+        <li>Supported design, development, and testing of orthopedic trauma implants and instruments.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <span class="exp-role">R&amp;D Officer — Meril Life Sciences Pvt. Ltd. (Cardiovascular)</span>
+        <span class="exp-dates">Feb 2018 – Dec 2019</span>
+      </div>
+      <ul>
+        <li>Supported R&amp;D activities for cardiovascular device development, including prototyping and testing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap grid-2">
+    <div>
+      <h2>Education</h2>
+      <p style="font-weight:600; margin-bottom:4px;">Bachelor of Engineering — Mechanical Engineering</p>
+      <p style="color:var(--ink-soft); font-size:14px; margin:0;">Laxmi Institute of Technology, Gujarat Technological University<br>2012 – 2016</p>
+    </div>
+    <div>
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>SQL (Intermediate) — HackerRank <a href="https://www.hackerrank.com/" target="_blank" rel="noopener">Verify ↗</a></li>
+        <li>SQL (Basic) — HackerRank <a href="https://www.hackerrank.com/" target="_blank" rel="noopener">Verify ↗</a></li>
+        <li>Data Analysis using Excel — Great Learning</li>
+        <li>SQL Project — Skill Challenge (Satish Dhawale)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="eyebrow" style="margin-bottom:6px;">Let's connect</p>
+  <h2 style="font-size:22px;">Open to Data Analyst &amp; BI Developer roles</h2>
+  <div class="links">
+    <a href="mailto:adiltheanalyst@zohomail.in">adiltheanalyst@zohomail.in</a>
+    <a href="https://www.linkedin.com/in/mohmadadil-shaikh" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="https://github.com/ady969" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+  <p class="note">Valsad, Gujarat, India — open to relocation</p>
+</footer>
+
+</body>
+</html>
